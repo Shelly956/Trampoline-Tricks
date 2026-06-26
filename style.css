@@ -11,46 +11,47 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
 }
 
 .container {
     text-align: center;
     background: white;
     border-radius: 20px;
-    padding: 30px;
+    padding: 20px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
     max-width: 900px;
+    width: 100%;
 }
 
 h1 {
     color: #667eea;
-    font-size: 3em;
-    margin-bottom: 20px;
+    font-size: 2.5em;
+    margin-bottom: 15px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
     color: #764ba2;
-    font-size: 1.5em;
-    margin-bottom: 15px;
+    font-size: 1.3em;
+    margin-bottom: 12px;
 }
 
 h3 {
     color: #667eea;
-    font-size: 1.3em;
-    margin-bottom: 10px;
+    font-size: 1.1em;
+    margin-bottom: 8px;
 }
 
 .game-info {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .score-board {
     display: flex;
     justify-content: center;
-    gap: 40px;
-    font-size: 1.2em;
+    gap: 30px;
+    font-size: 1.1em;
     font-weight: bold;
     color: #764ba2;
 }
@@ -60,27 +61,101 @@ h3 {
     border-radius: 10px;
     background: linear-gradient(to bottom, #87CEEB, #90EE90);
     display: block;
-    margin: 20px auto;
+    margin: 15px auto;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 100%;
+    height: auto;
+}
+
+/* Touch Controls */
+.touch-controls {
+    background: #f5f5f5;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.button-row {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.control-btn {
+    flex: 1;
+    min-width: 80px;
+    padding: 12px;
+    font-size: 0.9em;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.jump-btn {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.jump-btn:active {
+    background: #764ba2;
+    transform: scale(0.95);
+}
+
+.spin-btn {
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+}
+
+.spin-btn:active {
+    background: #f5576c;
+    transform: scale(0.95);
+}
+
+.flip-btn {
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+}
+
+.flip-btn:active {
+    background: #00f2fe;
+    transform: scale(0.95);
+}
+
+.trick-btn {
+    background: linear-gradient(135deg, #43e97b, #38f9d7);
+}
+
+.trick-btn:active {
+    background: #38f9d7;
+    transform: scale(0.95);
 }
 
 .controls {
     background: #f0f0f0;
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
-    margin: 20px 0;
+    margin: 15px 0;
     text-align: left;
+    font-size: 0.9em;
 }
 
 .controls p {
-    font-size: 1.1em;
-    margin: 8px 0;
+    font-size: 1em;
+    margin: 6px 0;
     color: #333;
 }
 
 .tricks-list {
     background: #fffacd;
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
     border: 2px solid #ffd700;
 }
@@ -91,8 +166,35 @@ h3 {
 }
 
 .tricks-list li {
-    font-size: 1.1em;
-    margin: 10px 0;
+    font-size: 1em;
+    margin: 8px 0;
     color: #333;
     font-weight: bold;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+        margin-bottom: 10px;
+    }
+
+    #gameCanvas {
+        margin: 10px auto;
+    }
+
+    .control-btn {
+        min-width: 70px;
+        padding: 10px;
+        font-size: 0.8em;
+    }
+
+    .score-board {
+        gap: 20px;
+        font-size: 0.95em;
+    }
 }
