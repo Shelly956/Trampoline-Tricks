@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    text-align: center;
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    max-width: 900px;
+}
+
+h1 {
+    color: #667eea;
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #764ba2;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+h3 {
+    color: #667eea;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.game-info {
+    margin-bottom: 20px;
+}
+
+.score-board {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #764ba2;
+}
+
+#gameCanvas {
+    border: 4px solid #667eea;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, #87CEEB, #90EE90);
+    display: block;
+    margin: 20px auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.controls {
+    background: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.controls p {
+    font-size: 1.1em;
+    margin: 8px 0;
+    color: #333;
+}
+
+.tricks-list {
+    background: #fffacd;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #ffd700;
+}
+
+.tricks-list ul {
+    list-style: none;
+    text-align: left;
+}
+
+.tricks-list li {
+    font-size: 1.1em;
+    margin: 10px 0;
+    color: #333;
+    font-weight: bold;
+}
